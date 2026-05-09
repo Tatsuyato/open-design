@@ -69,8 +69,10 @@ RUN pnpm --filter @open-design/daemon build && \
 FROM ${RUNTIME_IMAGE}
 
 RUN apk add --no-cache tini && \
-    addgroup -S -g 1001 open-design && \
-    adduser -S -D -H -u 1001 -G open-design open-design
+    deluser --remove-home node || true && \
+    addgroup -S -g 1000 open-design && \
+    adduser -S -D -u 1000 -G open-design open-design && \
+    npm install -g @google/gemini-cli
 
 WORKDIR /app
 COPY --from=build --chown=open-design:open-design /app/deploy/daemon ./apps/daemon

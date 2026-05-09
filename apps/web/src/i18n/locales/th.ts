@@ -137,7 +137,7 @@ export const th: Dict = {
   'settings.mediaProviderConfigured': 'ตั้งค่าแล้ว',
   'settings.mediaProviderUnset': 'ยังไม่ได้ตั้งค่า',
   'settings.mediaProviderClear': 'ล้าง',
-  'settings.mediaProviderClearConfirm': 'ล้างการตั้งค่า {name} ที่บันทึกไว้ใช่หรือไม่?',
+  'settings.mediaProviderClearConfirm': 'ล้างการตั้งค่า {name} ที่บันทึกไว้ใช่หรือไม่? คุณจะต้องตั้งค่าใหม่อีกครั้งเพื่อใช้งาน {name}',
   'settings.mediaProviderPlaceholder': 'วาง API key',
   'settings.mediaProviderBaseUrlPlaceholder': 'กำหนด Base URL แท่นค่าเริ่มต้น',
   'settings.privacy': 'ความเป็นส่วนตัว',

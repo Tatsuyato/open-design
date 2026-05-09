@@ -16,9 +16,10 @@ services:
       OD_PORT: 7456
       OD_WEB_PORT: ${OPEN_DESIGN_PORT:-7456}
     ports:
-      - "127.0.0.1:${OPEN_DESIGN_PORT:-7456}:7456"
+      - "${OPEN_DESIGN_PORT:-7456}:7456"
     volumes:
       - open_design_data:/app/.od
+      - ~/.gemini:/home/open-design/.gemini
     read_only: true
     tmpfs:
       - /tmp
